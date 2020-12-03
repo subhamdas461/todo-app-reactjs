@@ -1,13 +1,137 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box !important;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    scroll-behavior: smooth;
+    scroll-margin: 40px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+    background-color: rgb(48, 48, 49);
+}
+.nav{
+    background-color: #2c2c2c;   
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    height: 5em;
+    font-family: sans-serif;
+}
+.nav a{
+    position: relative;
+    left:10vw;
+}
+.nav svg{
+   color: rgb(255, 255, 255);
+  
+}
+.nav h1{
+    margin: 0 10vw 0 0;
+    color: rgb(148, 180, 126);
+    text-transform: uppercase;
+    font-size: 1em;
+    word-spacing: 4px;
+    letter-spacing: 1.5px;
+}
+.task-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px;   
+}
+.task-main form {
+    min-width: 360px;
+    margin-bottom: 30px;
+}
+.task-main form *{
+    border: none;
+    outline: none;
+    border-radius: 4px;
+}
+.task-main form input{
+    text-decoration: none !important;
+    font-weight: 350;
+    font-size: 17px;
+    background: rgba(88, 88, 88, 0.479);
+    color: #ffffff;
+    margin-right: 14px;
+    padding: 10px;
+    width: 70vw;
+    min-width: 260px;
+    max-width: 767px;
+    caret-color: rgb(252, 137, 137);
+}
+.task-main form button{
+    cursor: pointer;
+    background-color: #00000000;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px 9px 20px;
+    transition: all 0.2s;
+    border: 2px solid #4db430bb;
+}
+::placeholder{
+    color: rgba(177, 174, 174, 0.815);
+}
+
+.task-main form button:hover{
+    background-color:  rgba(31, 184, 90, 0.87);
+}
+.tasks{
+    color: rgb(204, 231, 243);
+    min-width: 70%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.tasks h2{
+    position: relative;
+    display: flex;
+    margin: 5px 0 ;
+   
+    background-color: rgba(63, 62, 62, 0.747);
+    padding: 20px 10px;
+    border-radius: 5px;
+    animation: fadein 0.15s ease-in-out;
+}
+.tasks h2 p:first-letter{
+    text-transform: capitalize ;
+   
+}
+.tasks svg{
+    color: rgb(19, 151, 69);
+    
+}
+@keyframes fadein{
+    0%{
+        opacity: 0;
+        transform: translateY(-80%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.tasks p{
+    width: 80%;
+    word-wrap: break-word;
+    font-weight: 300;
+    margin-top: 6px;
+}
+
+.tasks img{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    
+}
+@media(max-width : 600px){
+    .tasks h2{
+        width: 90vw;
+    }
+  
 }
